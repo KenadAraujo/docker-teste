@@ -3,7 +3,9 @@
 É um projeto teste para Dockerizar uma aplicação SpringBoot.
 
 ## Dockerfile
+
 Abaixo segue o Dockerfile
+
 ```Docker
 FROM openjdk:17
 WORKDIR /app
@@ -15,7 +17,11 @@ RUN chmod +x ./mvnw
 RUN ./mvnw clean package
 CMD java -jar target/*.jar
 ```
+<<<<<<< HEAD
 Comando para compilar a imagem
+=======
+Criando a imagem
+>>>>>>> 217efd9ebfb53afb438f2bbfde58b27c9a1770fd
 
 ```bash
 docker run -it -p 9000:9000 kenadaraujo/teste:1.0
@@ -23,6 +29,7 @@ docker run -it -p 9000:9000 kenadaraujo/teste:1.0
 
 ## docker-compose
 
+<<<<<<< HEAD
 Esse é um docker-compose básico, ele é responsável por subir os serviços da aplicação, do rabbitmq e do banco de dados postgres.
 
 ```yaml
@@ -69,3 +76,6 @@ Comando para destruir a stack
 ```bash
 docker-compose down
 ```
+=======
+Esse é um docker-compose básico(Em implementação)
+>>>>>>> 217efd9ebfb53afb438f2bbfde58b27c9a1770fd
