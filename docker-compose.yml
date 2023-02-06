@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  mensageria:
+    image: rabbitmq:3.11-management
+    container_name: rabbit-mq
+    networks:
+      - compose-bridge
+    ports:
+      - 5672:5672
+      - 15672:15672
+  bd:
+    image: postgres:latest
+    container_name: postgres-bd
+    networks:
+      - compose-bridge
+    environment:
+      - POSTGRES_PASSWORD=rootroot
+  app:
+    depends_on:
+      - mensageria
+      - bd
+    image: kenadaraujo/teste:1.0
+    container_name: app
+    networks:
+      - compose-bridge
+    ports:
+      - 9000:9000
+networks:
+  compose-bridge:
+    driver: bridge
