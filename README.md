@@ -1,6 +1,6 @@
 # Projeto teste com Docker
 
-É um projeto teste para Dockerizar uma aplicação SpringBoot.
+É um projeto teste para Dockerizar uma aplicação SpringBoot. Nessa aplicação, foi criado uma stack que utiliza 3 componentes de arquitetura: uma aplicação backend, um servidor de messageria([RabbitMQ](https://www.rabbitmq.com/download.html)) e um componente de banco de dados([Postgres](https://www.postgresql.org/download/)). A ideia principal é criar essa stack para produção e para desenvolvimento.
 
 ## Dockerfile
 
